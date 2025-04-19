@@ -1,22 +1,17 @@
-import 'dart:typed_data';
 import 'package:bargram_technical_manager/model/dto/driver_car.dart';
-import 'package:bargram_technical_manager/model/dto/enum/check_list_status.dart';
 import 'package:bargram_technical_manager/model/dto/service_result/general_service_result.dart';
-import 'package:bargram_technical_manager/model/shared_model.dart';
 import 'package:bargram_technical_manager/utils/shared_strings.dart';
+import 'package:bargram_technical_manager/view/widget/shared/alert.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:bargram_technical_manager/database/shared_preferences/shared_preferences_manager.dart';
-import 'package:bargram_technical_manager/view/widget/shared/alert.dart';
 import 'package:jdate/jdate.dart';
-import 'package:mac_address/mac_address.dart';
+
 import '../database/dbs_manager.dart';
 import '../model/dto/enum/get_driver_step.dart';
 import '../model/register_check_list_model.dart';
 import '../service/check_list_service.dart';
 import '../view/page/login_otp_page.dart';
-import 'get_all_registered_check_list_controller.dart';
 
 
 

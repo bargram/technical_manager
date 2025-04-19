@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/shayan-mobile/snap/flutter/common/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/shayan-mobile/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/shayan-mobile/Desktop/Project/flutter project/technical_manager/android/app/.cxx/RelWithDebInfo/3y6t396e/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/shayan-mobile/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/shayan-mobile/Desktop/Project/flutter project/technical_manager/android/app/.cxx/RelWithDebInfo/3y6t396e/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

@@ -1,0 +1,2 @@
+/home/shayan-mobile/Desktop/Project/flutter project/technical_manager/android/app/.cxx/RelWithDebInfo/3y6t396e/x86/CMakeFiles/edit_cache.dir
+/home/shayan-mobile/Desktop/Project/flutter project/technical_manager/android/app/.cxx/RelWithDebInfo/3y6t396e/x86/CMakeFiles/rebuild_cache.dir

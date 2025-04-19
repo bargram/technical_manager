@@ -1,0 +1,1 @@
+/home/shayan-mobile/Desktop/Project/flutter project/technical_manager/build/app/intermediates/cxx/Debug/34442qp5/obj/arm64-v8a

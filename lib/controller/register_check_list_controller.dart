@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:bargram_technical_manager/database/shared_preferences/shared_preferences_manager.dart';
 import 'package:bargram_technical_manager/view/widget/shared/alert.dart';
-import 'package:mac_address/mac_address.dart';
 import '../database/dbs_manager.dart';
 import '../service/check_list_service.dart';
 import '../view/page/login_otp_page.dart';
@@ -78,7 +77,7 @@ class RegisterCheckListController extends GetxController{
       //Sending request to server
       GeneralServiceResult result = await CheckListService.register(
           token: (await SharedPreferencesManager.getAccessToken()),
-          macAddress: await GetMac.macAddress,
+          macAddress: 'await GetMac.macAddress',
           nationalCode: nationalCode,
           carId: carId,
           signatureImage: signatureImage,
