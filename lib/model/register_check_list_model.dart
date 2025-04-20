@@ -1,6 +1,8 @@
+import 'dart:io';
 import 'dart:typed_data';
 import 'package:finger_painter/finger_painter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get.dart';
 import 'package:screenshot/screenshot.dart';
 import 'dto/driver_car.dart';
@@ -138,7 +140,19 @@ class RegisterCheckListModel extends GetxController{
   static void setSignatureData(Uint8List? value){
     _signatureData = value;
   }
-  
+    static File? _sellfieImage;
+  File? get sellfieImage => _sellfieImage;
+  set sellfieImage(value) {
+    _sellfieImage = value;
+    update();
+  }
+
+  static setSellfieImage(File? value) {
+    //if class is in real time state then we use GetX for setting value else we setting value normally
+    changeNotifier
+        ? Get.find<RegisterCheckListModel>().sellfieImage = value
+        : _sellfieImage = value;
+  }
   static List<RegisterCheckListItem> _items = <RegisterCheckListItem>[
     RegisterCheckListItem(title:'1- گواهی معاینه فنی معتبر'),
     RegisterCheckListItem(title:'2- سلامت ظاهری رینگ ها و لاستیک ها'),

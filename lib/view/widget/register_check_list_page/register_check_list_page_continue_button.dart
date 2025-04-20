@@ -154,6 +154,7 @@ class _RegisterCheckListPageContinueButtonState extends State<RegisterCheckListP
           }else{
             RegisterCheckListController.run(
                 context: context,
+                selfie:RegisterCheckListModel().sellfieImage!,
                 signatureImage: (await RegisterCheckListModel.screenshotController.capture())!,
                 govahiname_fani_motabar: '${RegisterCheckListModel().endOfTechnicalDiagnosis!.year}-${addZeroToSingleDigitNumber(RegisterCheckListModel().endOfTechnicalDiagnosis!.month.toString())}-${addZeroToSingleDigitNumber(RegisterCheckListModel().endOfTechnicalDiagnosis!.day.toString())}',
                 nationalCode: RegisterCheckListModel.driverNationalCodeController.text,

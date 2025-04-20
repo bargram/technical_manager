@@ -5,6 +5,7 @@ import 'package:bargram_technical_manager/utils/colors.dart';
 import 'package:bargram_technical_manager/utils/fonts.dart';
 import 'package:bargram_technical_manager/utils/logger.dart';
 import 'package:bargram_technical_manager/view/page/splash_page.dart';
+import 'package:face_camera/face_camera.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
@@ -57,6 +58,7 @@ void main()async{
   // }catch(err){
   //   Logger.consolePrint(err);
   // }
+  await FaceCamera.initialize();
 
   try{
     // await LocalNotificationService.init();

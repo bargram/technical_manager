@@ -1,5 +1,6 @@
 
 import 'dart:convert';
+import 'dart:io';
 import 'package:bargram_technical_manager/model/registered_check_list_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:bargram_technical_manager/utils/json_helper.dart';
@@ -357,6 +358,7 @@ class CheckListService {
     required bool roayat_mane_moqararat,
     required bool mahar_sahih_bar_va_chideman,
     required String tarikh_kapsol_atashneshani,
+    required File selfie,
   })async{
 
 
@@ -396,6 +398,7 @@ class CheckListService {
           'roayat_mane_moqararat':roayat_mane_moqararat.toString(),
           'mahar_sahih_bar_va_chideman':mahar_sahih_bar_va_chideman.toString(),
           'tarikh_kapsol_atashneshani':tarikh_kapsol_atashneshani.toString(),
+          'selfie': dio.MultipartFile.fromBytes(await FlutterImageCompress.compressWithList(selfie.readAsBytesSync(), quality: 50), filename:'signature.png', contentType:MediaType("image", 'png')),
           "emza": dio.MultipartFile.fromBytes(await FlutterImageCompress.compressWithList(signatureImage, quality: 50), filename:'signature.png', contentType:MediaType("image", 'png')),
         }:
         {
@@ -430,6 +433,7 @@ class CheckListService {
           'roayat_mane_moqararat':roayat_mane_moqararat.toString(),
           'mahar_sahih_bar_va_chideman':mahar_sahih_bar_va_chideman.toString(),
           'tarikh_kapsol_atashneshani':tarikh_kapsol_atashneshani.toString(),
+          'selfie': dio.MultipartFile.fromBytes(await FlutterImageCompress.compressWithList(selfie.readAsBytesSync(), quality: 50), filename:'signature.png', contentType:MediaType("image", 'png')),
           "emza": dio.MultipartFile.fromBytes(await FlutterImageCompress.compressWithList(signatureImage, quality: 50), filename:'signature.png', contentType:MediaType("image", 'png')),
         }
       );
